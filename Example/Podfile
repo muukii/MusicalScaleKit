@@ -1,0 +1,8 @@
+use_frameworks!
+
+
+target 'MusicalScaleKit_Tests', :exclusive => true do
+  pod 'MusicalScaleKit', :path => '../'
+
+  
+end
