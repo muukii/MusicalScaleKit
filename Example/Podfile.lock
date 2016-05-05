@@ -1,0 +1,14 @@
+PODS:
+  - MusicalScaleKit (0.1.0)
+
+DEPENDENCIES:
+  - MusicalScaleKit (from `../`)
+
+EXTERNAL SOURCES:
+  MusicalScaleKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MusicalScaleKit: e336ace9498278c71c2d3d001c03b3996e119d23
+
+COCOAPODS: 0.39.0
