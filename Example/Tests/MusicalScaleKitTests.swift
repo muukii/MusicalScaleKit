@@ -102,6 +102,8 @@ class MusicalScaleTests: XCTestCase {
         ]
        
         XCTAssertEqual(major.notes, _major)
+        
+        print(major)
     }
     
     func testDorianScale() {
@@ -130,6 +132,7 @@ class MusicalScaleTests: XCTestCase {
         ]
        
         XCTAssertEqual(scale.notes, _scale)
+        print(scale)
     }
     
     func testPhrigianScale() {
