@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MusicalScaleKit: e336ace9498278c71c2d3d001c03b3996e119d23
+  MusicalScaleKit: 2e4eccc6b32b7a4053f995f2a345cd2a1061c3e6
 
 COCOAPODS: 0.39.0
