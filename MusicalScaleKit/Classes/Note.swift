@@ -35,7 +35,8 @@ public enum Note : CustomStringConvertible, CustomDebugStringConvertible, Hashab
     case G(Accidental)
     
     public init(key: Note, degree: Degree) {
-        let notes = Notes(initialNote: key)
+        
+        let notes = Notes(initialNote: key, sortSharp: true)
         
         var noteMap: [Int : Note] = [:]
         noteMap[-30] = notes[-1]
@@ -54,7 +55,9 @@ public enum Note : CustomStringConvertible, CustomDebugStringConvertible, Hashab
         noteMap[360] = notes[12]
         noteMap[390] = notes[13]
         
-        guard let note = noteMap[degree.circleAngle] else {
+        let naturalNote = noteMap[degree.naturalDegree.circleAngle]
+        
+        guard let note = naturalNote?.applyAccidental(degree.accidental) else {
             fatalError("OMG")
         }
         
@@ -106,7 +109,8 @@ public enum Note : CustomStringConvertible, CustomDebugStringConvertible, Hashab
         guard accidental != .None else {
             return self
         }
-        let notes = Notes(initialNote: self)
+        
+        let notes = Notes(initialNote: self, sortSharp: accidental == .Sharp)
         switch accidental {
         case .Natural:
             switch self {

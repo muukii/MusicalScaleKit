@@ -22,21 +22,6 @@
 
 public struct Notes: SequenceType, CollectionType {
     
-    private static let allNotes: [Note] = [
-        .A(.Natural),
-        .A(.Sharp),
-        .B(.Natural),
-        .C(.Natural),
-        .C(.Sharp),
-        .D(.Natural),
-        .D(.Sharp),
-        .E(.Natural),
-        .F(.Natural),
-        .F(.Sharp),
-        .G(.Natural),
-        .G(.Sharp),
-        ]
-    
     public var startIndex: Int {
         return 0
     }
@@ -46,27 +31,27 @@ public struct Notes: SequenceType, CollectionType {
     }
     
     public func indexOf(element: Note) -> Int? {
-        return Notes.allNotes.indexOf(element).flatMap { $0 - initialIndex }
+        return self.allNotes.indexOf(element).flatMap { $0 - initialIndex }
     }
     
     public subscript(i: Int) -> Note {
                 
         if i < 0 {
-            let index = ((abs(i) + (Notes.allNotes.count - 1 - initialIndex)) % (Notes.allNotes.count))
-            return Notes.allNotes.reverse()[index]
+            let index = ((abs(i) + (self.allNotes.count - 1 - initialIndex)) % (self.allNotes.count))
+            return self.allNotes.reverse()[index]
             
         } else {
-            let index = ((i + initialIndex) % (Notes.allNotes.count))
-            let note = Notes.allNotes[index]
+            let index = ((i + initialIndex) % (self.allNotes.count))
+            let note = self.allNotes[index]
             return note
         }
     }
     
     public func generate() -> AnyGenerator<Note> {
-        let count = Notes.allNotes.count
+        let count = self.allNotes.count
         var i: Int = initialIndex
         return AnyGenerator { () -> Note in
-            let note = Notes.allNotes[i]
+            let note = self.allNotes[i]
             i += 1
             if i == count {
                 i = 0
@@ -75,12 +60,48 @@ public struct Notes: SequenceType, CollectionType {
         }
     }
     
-    public init(initialNote: Note) {
-        guard let index = Notes.allNotes.indexOf(initialNote) else {
+    public init(initialNote: Note, sortSharp: Bool) {
+        
+        if sortSharp {
+            
+            allNotes = [
+                .A(.Natural),
+                .A(.Sharp),
+                .B(.Natural),
+                .C(.Natural),
+                .C(.Sharp),
+                .D(.Natural),
+                .D(.Sharp),
+                .E(.Natural),
+                .F(.Natural),
+                .F(.Sharp),
+                .G(.Natural),
+                .G(.Sharp),
+            ]
+        } else {
+            
+            allNotes = [
+                .A(.Natural),
+                .B(.Flat),
+                .B(.Natural),
+                .C(.Natural),
+                .D(.Flat),
+                .D(.Natural),
+                .E(.Flat),
+                .E(.Natural),
+                .F(.Natural),
+                .G(.Flat),
+                .G(.Natural),
+                .A(.Flat),
+            ]
+        }
+        
+        guard let index = self.allNotes.indexOf(initialNote) else {
             fatalError("Not found note index")
         }
-        initialIndex = index
+        self.initialIndex = index
     }
     
-    let initialIndex: Int
+    private let initialIndex: Int
+    private let allNotes: [Note]
 }
