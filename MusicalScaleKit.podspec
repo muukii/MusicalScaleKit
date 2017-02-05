@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MusicalScaleKit"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "Generate notes on Musical Scale"
   s.description      = <<-DESC
                         Generate notes on Musical Scale.
@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'MusicalScaleKit/Classes/**/*'
+  s.source_files = 'MusicalScaleKit/**/*.swift'
 end

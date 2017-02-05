@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "MusicalScaleKit_Example.app"
-               BlueprintName = "MusicalScaleKit_Example"
-               ReferencedContainer = "container:MusicalScaleKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "MusicalScaleKit_Tests.xctest"
-               BlueprintName = "MusicalScaleKit_Tests"
+               BlueprintIdentifier = "4BDAA4521E475B8700EA41ED"
+               BuildableName = "MusicalScaleKit.framework"
+               BlueprintName = "MusicalScaleKit"
                ReferencedContainer = "container:MusicalScaleKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "MusicalScaleKit_Tests.xctest"
-               BlueprintName = "MusicalScaleKit_Tests"
+               BlueprintIdentifier = "4BDAA45B1E475B8700EA41ED"
+               BuildableName = "MusicalScaleKitTests.xctest"
+               BlueprintName = "MusicalScaleKitTests"
                ReferencedContainer = "container:MusicalScaleKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "MusicalScaleKit_Example.app"
-            BlueprintName = "MusicalScaleKit_Example"
+            BlueprintIdentifier = "4BDAA4521E475B8700EA41ED"
+            BuildableName = "MusicalScaleKit.framework"
+            BlueprintName = "MusicalScaleKit"
             ReferencedContainer = "container:MusicalScaleKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "MusicalScaleKit_Example.app"
-            BlueprintName = "MusicalScaleKit_Example"
+            BlueprintIdentifier = "4BDAA4521E475B8700EA41ED"
+            BuildableName = "MusicalScaleKit.framework"
+            BlueprintName = "MusicalScaleKit"
             ReferencedContainer = "container:MusicalScaleKit.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -94,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "MusicalScaleKit_Example.app"
-            BlueprintName = "MusicalScaleKit_Example"
+            BlueprintIdentifier = "4BDAA4521E475B8700EA41ED"
+            BuildableName = "MusicalScaleKit.framework"
+            BlueprintName = "MusicalScaleKit"
             ReferencedContainer = "container:MusicalScaleKit.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -21,34 +21,34 @@
 // THE SOFTWARE.
 
 public enum Accidental: CustomStringConvertible, CustomDebugStringConvertible {
-    case Natural
-    case Sharp
-    case Flat
-    
-    public var description: String {
-        switch self {
-        case .Natural:
-            return ""
-        case .Flat:
-            return "♭"
-        case .Sharp:
-            return "#"
-        }
+  case natural
+  case sharp
+  case flat
+
+  public var description: String {
+    switch self {
+    case .natural:
+      return ""
+    case .flat:
+      return "♭"
+    case .sharp:
+      return "#"
     }
-    
-    var circleAngle: Int {
-        switch self {
-        case .Natural:
-            return 0
-        case .Flat:
-            return -30
-        case .Sharp:
-            return 30
-        }
+  }
+
+  var circleAngle: Int {
+    switch self {
+    case .natural:
+      return 0
+    case .flat:
+      return -30
+    case .sharp:
+      return 30
     }
-    
-    public var debugDescription: String {
-        return description
-    }
+  }
+
+  public var debugDescription: String {
+    return description
+  }
 }
 
