@@ -21,33 +21,33 @@
 // THE SOFTWARE.
 
 public struct Scale: CustomDebugStringConvertible {
-    public let degrees: [Degree]
-    public let key: Note
-    
-    public init(key: Note, degrees: [Degree]) {
-        self.key = key
-        self.degrees = degrees
-    }
-    
-    public var debugDescription: String {
-        return "key: \(key.debugDescription)\n" + "degrees: \(degrees.debugDescription)\n" + "notes: \(notes)"
-    }
-    
-    public var notes: [Note] {
-        
-        return degrees.map { Note(key: key, degree: $0) }
-    }
-    
-    private func createMajorScale(key key: Note) -> [Note] {
-        
-        return [
-            Note(key: key, degree: Degree.One(.Natural)),
-            Note(key: key, degree: Degree.Two(.Natural)),
-            Note(key: key, degree: Degree.Three(.Natural)),
-            Note(key: key, degree: Degree.Four(.Natural)),
-            Note(key: key, degree: Degree.Five(.Natural)),
-            Note(key: key, degree: Degree.Six(.Natural)),
-            Note(key: key, degree: Degree.Seven(.Natural)),
-        ]
-    }
+  public let degrees: [Degree]
+  public let key: Note
+
+  public init(key: Note, degrees: [Degree]) {
+    self.key = key
+    self.degrees = degrees
+  }
+
+  public var debugDescription: String {
+    return "key: \(key.debugDescription)\n" + "degrees: \(degrees.debugDescription)\n" + "notes: \(notes)"
+  }
+
+  public var notes: [Note] {
+
+    return degrees.map { Note(key: key, degree: $0) }
+  }
+
+  private func createMajorScale(key: Note) -> [Note] {
+
+    return [
+      Note(key: key, degree: Degree.one(.natural)),
+      Note(key: key, degree: Degree.two(.natural)),
+      Note(key: key, degree: Degree.three(.natural)),
+      Note(key: key, degree: Degree.four(.natural)),
+      Note(key: key, degree: Degree.Five(.natural)),
+      Note(key: key, degree: Degree.six(.natural)),
+      Note(key: key, degree: Degree.seven(.natural)),
+    ]
+  }
 }
