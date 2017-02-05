@@ -15,63 +15,63 @@ class MusicalScaleTests: XCTestCase {
   }
 
   func testNoteAngle() {
-    XCTAssertEqual(Note.A(.natural).sharp().circleAngle, Note.B(.flat).circleAngle)
-    XCTAssertEqual(Note.B(.natural).sharp().circleAngle, Note.C(.natural).circleAngle)
-    XCTAssertEqual(Note.A(.natural).flat().circleAngle, Note.G(.sharp).circleAngle)
+    XCTAssertEqual(Note.a(.natural).sharp().circleAngle, Note.b(.flat).circleAngle)
+    XCTAssertEqual(Note.b(.natural).sharp().circleAngle, Note.c(.natural).circleAngle)
+    XCTAssertEqual(Note.a(.natural).flat().circleAngle, Note.g(.sharp).circleAngle)
   }
 
   func testsharp() {
 
     do { // A
-      let note = Note.A(.natural)
-      XCTAssertEqual(note.sharp(), Note.A(.sharp))
+      let note = Note.a(.natural)
+      XCTAssertEqual(note.sharp(), Note.a(.sharp))
     }
 
     do { // B
-      let note = Note.B(.natural)
-      XCTAssertEqual(note.sharp(), Note.B(.sharp))
+      let note = Note.b(.natural)
+      XCTAssertEqual(note.sharp(), Note.b(.sharp))
     }
 
     do { // C
-      let note = Note.C(.natural)
-      XCTAssertEqual(note.sharp(), Note.C(.sharp))
+      let note = Note.c(.natural)
+      XCTAssertEqual(note.sharp(), Note.c(.sharp))
     }
 
     do { // D
-      let note = Note.D(.natural)
-      XCTAssertEqual(note.sharp(), Note.D(.sharp))
+      let note = Note.d(.natural)
+      XCTAssertEqual(note.sharp(), Note.d(.sharp))
     }
 
     do { // E
-      let note = Note.E(.natural)
-      XCTAssertEqual(note.sharp(), Note.E(.sharp))
+      let note = Note.e(.natural)
+      XCTAssertEqual(note.sharp(), Note.e(.sharp))
     }
 
     do { // F
-      let note = Note.F(.natural)
-      XCTAssertEqual(note.sharp(), Note.F(.sharp))
+      let note = Note.f(.natural)
+      XCTAssertEqual(note.sharp(), Note.f(.sharp))
     }
 
     do { // G
-      let note = Note.G(.natural)
-      XCTAssertEqual(note.sharp(), Note.G(.sharp))
+      let note = Note.g(.natural)
+      XCTAssertEqual(note.sharp(), Note.g(.sharp))
     }
   }
 
   func testsharp2() {
 
-    let n = Note.A(.natural)
+    let n = Note.a(.natural)
 
-    XCTAssertEqual(n, Note.A(.natural))
-    XCTAssertEqual(n.sharp(), Note.A(.sharp))
-    XCTAssertEqual(n.sharp().sharp(), Note.B(.natural))
-    XCTAssertEqual(n.sharp().sharp().sharp(), Note.C(.natural))
+    XCTAssertEqual(n, Note.a(.natural))
+    XCTAssertEqual(n.sharp(), Note.a(.sharp))
+    XCTAssertEqual(n.sharp().sharp(), Note.b(.natural))
+    XCTAssertEqual(n.sharp().sharp().sharp(), Note.c(.natural))
   }
 
   func testIonialScale() {
 
     let major = Scale(
-      key: .C(.natural),
+      key: .c(.natural),
       degrees: [
         .one(.natural),
         .two(.natural),
@@ -84,13 +84,13 @@ class MusicalScaleTests: XCTestCase {
     )
 
     let _major: [Note] = [
-      .C(.natural),
-      .D(.natural),
-      .E(.natural),
-      .F(.natural),
-      .G(.natural),
-      .A(.natural),
-      .B(.natural),
+      .c(.natural),
+      .d(.natural),
+      .e(.natural),
+      .f(.natural),
+      .g(.natural),
+      .a(.natural),
+      .b(.natural),
       ]
 
     XCTAssertEqual(major.notes, _major)
@@ -101,7 +101,7 @@ class MusicalScaleTests: XCTestCase {
   func testDorianScale() {
 
     let scale = Scale(
-      key: .C(.natural),
+      key: .c(.natural),
       degrees: [
         .one(.natural),
         .two(.natural),
@@ -114,13 +114,13 @@ class MusicalScaleTests: XCTestCase {
     )
 
     let _scale: [Note] = [
-      .C(.natural),
-      .D(.natural),
-      .E(.flat),
-      .F(.natural),
-      .G(.natural),
-      .A(.natural),
-      .B(.flat),
+      .c(.natural),
+      .d(.natural),
+      .e(.flat),
+      .f(.natural),
+      .g(.natural),
+      .a(.natural),
+      .b(.flat),
       ]
 
     XCTAssertEqual(scale.notes, _scale)
@@ -130,7 +130,7 @@ class MusicalScaleTests: XCTestCase {
   func testPhrigianScale() {
 
     let scale = Scale(
-      key: .C(.natural),
+      key: .c(.natural),
       degrees: [
         .one(.natural),
         .two(.flat),
@@ -143,13 +143,13 @@ class MusicalScaleTests: XCTestCase {
     )
 
     let _scale: [Note] = [
-      .C(.natural),
-      .D(.flat),
-      .E(.flat),
-      .F(.natural),
-      .G(.natural),
-      .A(.flat),
-      .B(.flat),
+      .c(.natural),
+      .d(.flat),
+      .e(.flat),
+      .f(.natural),
+      .g(.natural),
+      .a(.flat),
+      .b(.flat),
       ]
 
     XCTAssertEqual(scale.notes, _scale)
@@ -158,7 +158,7 @@ class MusicalScaleTests: XCTestCase {
   func testLydianScale() {
 
     let scale = Scale(
-      key: .C(.natural),
+      key: .c(.natural),
       degrees: [
         .one(.natural),
         .two(.natural),
@@ -171,13 +171,13 @@ class MusicalScaleTests: XCTestCase {
     )
 
     let _scale: [Note] = [
-      .C(.natural),
-      .D(.natural),
-      .E(.natural),
-      .F(.sharp),
-      .G(.natural),
-      .A(.natural),
-      .B(.natural),
+      .c(.natural),
+      .d(.natural),
+      .e(.natural),
+      .f(.sharp),
+      .g(.natural),
+      .a(.natural),
+      .b(.natural),
       ]
 
     XCTAssertEqual(scale.notes, _scale)

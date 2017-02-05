@@ -69,34 +69,34 @@ public struct Notes: Collection {
     if sortsharp {
 
       allNotes = [
-        .A(.natural),
-        .A(.sharp),
-        .B(.natural),
-        .C(.natural),
-        .C(.sharp),
-        .D(.natural),
-        .D(.sharp),
-        .E(.natural),
-        .F(.natural),
-        .F(.sharp),
-        .G(.natural),
-        .G(.sharp),
+        .a(.natural),
+        .a(.sharp),
+        .b(.natural),
+        .c(.natural),
+        .c(.sharp),
+        .d(.natural),
+        .d(.sharp),
+        .e(.natural),
+        .f(.natural),
+        .f(.sharp),
+        .g(.natural),
+        .g(.sharp),
       ]
     } else {
 
       allNotes = [
-        .A(.natural),
-        .B(.flat),
-        .B(.natural),
-        .C(.natural),
-        .D(.flat),
-        .D(.natural),
-        .E(.flat),
-        .E(.natural),
-        .F(.natural),
-        .G(.flat),
-        .G(.natural),
-        .A(.flat),
+        .a(.natural),
+        .b(.flat),
+        .b(.natural),
+        .c(.natural),
+        .d(.flat),
+        .d(.natural),
+        .e(.flat),
+        .e(.natural),
+        .f(.natural),
+        .g(.flat),
+        .g(.natural),
+        .a(.flat),
       ]
     }
 

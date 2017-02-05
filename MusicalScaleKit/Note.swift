@@ -26,13 +26,13 @@ public func == (lhs: Note, rhs: Note) -> Bool {
 
 public enum Note : CustomStringConvertible, CustomDebugStringConvertible, Hashable {
 
-  case A(Accidental)
-  case B(Accidental)
-  case C(Accidental)
-  case D(Accidental)
-  case E(Accidental)
-  case F(Accidental)
-  case G(Accidental)
+  case a(Accidental)
+  case b(Accidental)
+  case c(Accidental)
+  case d(Accidental)
+  case e(Accidental)
+  case f(Accidental)
+  case g(Accidental)
 
   public init(key: Note, degree: Degree) {
 
@@ -66,19 +66,19 @@ public enum Note : CustomStringConvertible, CustomDebugStringConvertible, Hashab
 
     let rawAngle: Int
     switch self {
-    case .A(let a):
+    case .a(let a):
       rawAngle = 0 + a.circleAngle
-    case .B(let a):
+    case .b(let a):
       rawAngle = 60 + a.circleAngle
-    case .C(let a):
+    case .c(let a):
       rawAngle = 90 + a.circleAngle
-    case .D(let a):
+    case .d(let a):
       rawAngle = 150 + a.circleAngle
-    case .E(let a):
+    case .e(let a):
       rawAngle = 210 + a.circleAngle
-    case .F(let a):
+    case .f(let a):
       rawAngle = 240 + a.circleAngle
-    case .G(let a):
+    case .g(let a):
       rawAngle = 300 + a.circleAngle
     }
 
@@ -108,20 +108,20 @@ public enum Note : CustomStringConvertible, CustomDebugStringConvertible, Hashab
     switch accidental {
     case .natural:
       switch self {
-      case .A:
-        return .A(.natural)
-      case .B:
-        return .B(.natural)
-      case .C:
-        return .C(.natural)
-      case .D:
-        return .D(.natural)
-      case .E:
-        return .E(.natural)
-      case .F:
-        return .F(.natural)
-      case .G:
-        return .G(.natural)
+      case .a:
+        return .a(.natural)
+      case .b:
+        return .b(.natural)
+      case .c:
+        return .c(.natural)
+      case .d:
+        return .d(.natural)
+      case .e:
+        return .e(.natural)
+      case .f:
+        return .f(.natural)
+      case .g:
+        return .g(.natural)
       }
     case .flat:
       return notes[-1]
@@ -145,19 +145,19 @@ public enum Note : CustomStringConvertible, CustomDebugStringConvertible, Hashab
   private var baseNoteString: String {
 
     switch self {
-    case .A:
+    case .a:
       return "A"
-    case .B:
+    case .b:
       return "B"
-    case .C:
+    case .c:
       return "C"
-    case .D:
+    case .d:
       return "D"
-    case .E:
+    case .e:
       return "E"
-    case .F:
+    case .f:
       return "F"
-    case .G:
+    case .g:
       return "G"
     }
   }
@@ -165,19 +165,19 @@ public enum Note : CustomStringConvertible, CustomDebugStringConvertible, Hashab
   private var accidental: Accidental {
 
     switch self {
-    case .A(let accidental):
+    case .a(let accidental):
       return accidental
-    case .B(let accidental):
+    case .b(let accidental):
       return accidental
-    case .C(let accidental):
+    case .c(let accidental):
       return accidental
-    case .D(let accidental):
+    case .d(let accidental):
       return accidental
-    case .E(let accidental):
+    case .e(let accidental):
       return accidental
-    case .F(let accidental):
+    case .f(let accidental):
       return accidental
-    case .G(let accidental):
+    case .g(let accidental):
       return accidental
     }
   }

@@ -26,15 +26,15 @@ public struct Scale {
 
 ```swift
 let ionianScale = Scale(
-    key: .C(.Natural),
+    key: .C(.natural),
     degrees: [
-        .One(.Natural),
-        .Two(.Natural),
-        .Three(.Natural),
-        .Four(.Natural),
-        .Five(.Natural),
-        .Six(.Natural),
-        .Seven(.Natural),
+        .one(.natural),
+        .two(.natural),
+        .three(.natural),
+        .four(.natural),
+        .five(.natural),
+        .six(.natural),
+        .seven(.natural),
     ]
 )
 
@@ -51,15 +51,15 @@ notes: [C, D, E, F, G, A, B]
 
 ```swift
 let dorianScale = Scale(
-    key: .C(.Natural),
+    key: .C(.natural),
     degrees: [
-        .One(.Natural),
-        .Two(.Natural),
-        .Three(.Flat),
-        .Four(.Natural),
-        .Five(.Natural),
-        .Six(.Natural),
-        .Seven(.Flat),
+        .one(.natural),
+        .two(.natural),
+        .three(.flat),
+        .four(.natural),
+        .five(.natural),
+        .six(.natural),
+        .seven(.flat),
     ]
 )
 
@@ -75,15 +75,15 @@ notes: [C, D, D#, F, G, A, A#]
 ### Create Note
 
 ```swift
-let a = Note.A(.Natural)
-let a_flat = Note.A(.Flat)
-let a_sharp = Note.A(.Sharp)
+let a = Note.a(.natural)
+let a_flat = Note.a(.flat)
+let a_sharp = Note.a(.sharp)
 ```
 
 or
 
 ```swift
-let a = Note.A(.Natural)
+let a = Note.a(.natural)
 let a_flat = a.flat()
 let a_sharp = a.sharp()
 ```
