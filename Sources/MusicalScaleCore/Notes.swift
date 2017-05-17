@@ -20,25 +20,25 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-public struct Notes: Collection {
+struct Notes: Collection {
 
-  public func index(after i: Int) -> Int {
+  func index(after i: Int) -> Int {
     return i + 1
   }
 
-  public var startIndex: Int {
+  var startIndex: Int {
     return 0
   }
 
-  public var endIndex: Int {
+  var endIndex: Int {
     return count
   }
 
-  public func index(of element: Note) -> Int? {
+  func index(of element: Note) -> Int? {
     return self.allNotes.index(of: element).flatMap { $0 - initialIndex }
   }
 
-  public subscript(i: Int) -> Note {
+  subscript(i: Int) -> Note {
 
     if i < 0 {
       let index = ((abs(i) + (self.allNotes.count - 1 - initialIndex)) % (self.allNotes.count))
@@ -51,7 +51,7 @@ public struct Notes: Collection {
     }
   }
 
-  public func generate() -> AnyIterator<Note> {
+  func generate() -> AnyIterator<Note> {
     let count = self.allNotes.count
     var i: Int = initialIndex
     return AnyIterator { () -> Note in
@@ -64,7 +64,7 @@ public struct Notes: Collection {
     }
   }
 
-  public init(initialNote: Note, sortsharp: Bool) {
+  init(initialNote: Note, sortsharp: Bool) {
 
     if sortsharp {
 

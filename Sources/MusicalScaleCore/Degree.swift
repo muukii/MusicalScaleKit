@@ -30,7 +30,7 @@ public enum Degree: CustomDebugStringConvertible, Hashable {
   case two(Accidental)
   case three(Accidental)
   case four(Accidental)
-  case Five(Accidental)
+  case five(Accidental)
   case six(Accidental)
   case seven(Accidental)
 
@@ -45,7 +45,7 @@ public enum Degree: CustomDebugStringConvertible, Hashable {
       return accidental
     case .four(let accidental):
       return accidental
-    case .Five(let accidental):
+    case .five(let accidental):
       return accidental
     case .six(let accidental):
       return accidental
@@ -65,8 +65,8 @@ public enum Degree: CustomDebugStringConvertible, Hashable {
       return .three(.natural)
     case .four:
       return .four(.natural)
-    case .Five:
-      return .Five(.natural)
+    case .five:
+      return .five(.natural)
     case .six:
       return .six(.natural)
     case .seven:
@@ -86,7 +86,7 @@ public enum Degree: CustomDebugStringConvertible, Hashable {
       baseAngle = 120
     case .four:
       baseAngle = 150
-    case .Five:
+    case .five:
       baseAngle = 210
     case .six:
       baseAngle = 270
@@ -115,7 +115,7 @@ public enum Degree: CustomDebugStringConvertible, Hashable {
       return 3
     case .four:
       return 4
-    case .Five:
+    case .five:
       return 5
     case .six:
       return 6
