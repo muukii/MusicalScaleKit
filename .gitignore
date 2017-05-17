@@ -33,3 +33,4 @@ Carthage
 Pods/
 
 .build
+*.xcodeproj/
